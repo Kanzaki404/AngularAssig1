@@ -1,0 +1,17 @@
+<div class="row">
+  <hr>
+    <div  class="col-xs-12 col-md-8 col-md-offset-2">
+      
+      
+      
+      <div class="list-group" *ngIf="!bevSelected"><p style="color: white; text-align: center; ">Choose your Poison</p>
+        <button type="button" class="list-group-item list-group-item-action" (click)="onOrder('Wiskey')">Wiskey</button>
+        <button type="button" class="list-group-item list-group-item-action" (click)="onOrder('Beer')">Beer</button>
+        <button type="button" class="list-group-item list-group-item-action" (click)="onOrder('Mead')">Mead</button>
+        <button type="button" class="list-group-item list-group-item-action" (click)="onOrder('VIB')">Vodka infused berries</button>
+      </div>
+     <h2 *ngIf="bevSelected" style="color: white; text-align: center;">One {{drink}}, coming right up!</h2>
+    </div>
+
+  </div>
+  <hr>

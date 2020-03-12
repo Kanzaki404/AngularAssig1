@@ -1,0 +1,12 @@
+  .bg { 
+    /* The image used from bootstrap site plis dont fail me */
+    background-image: url("https://i.pinimg.com/originals/17/44/80/174480a535dab4dc8389d4d85837f38f.jpg");
+  
+    
+    height: 900px; 
+    
+   
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
