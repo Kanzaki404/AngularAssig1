@@ -7,6 +7,7 @@ export class DataService {
     cowBoy = {
 
     name: "",
+    lastName:"",
     beverage: ""
     }
 
@@ -21,9 +22,10 @@ export class DataService {
        return (localStorage.getItem('1') !== null) ? false : true;
     }
 
-    userNameReg(name:string){
-       // this.customerName = name;
-        this.customerName = this.cowBoy.name=name;
+    userNameReg(name:string,lastname:string){
+        this.customerName =   this.cowBoy.lastName=lastname;
+        this.cowBoy.name=name;
+
         localStorage.setItem('1',  this.customerName)
     }
 
@@ -39,7 +41,7 @@ export class DataService {
        const retStr = localStorage.getItem('1');
        this.cowBoy = JSON.parse(retStr);
       // console.log(this.cowBoy.name);
-       return this.cowBoy.name;
+       return this.cowBoy.lastName;
     }
 
     getUsualBev(){

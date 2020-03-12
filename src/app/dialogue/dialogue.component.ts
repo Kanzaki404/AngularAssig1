@@ -30,14 +30,12 @@ userNameSet:boolean = false;
   del(){
      this.dataService.removeUser()
   }
-  onSubmitName(name:string){
-    
-   
-    
-    if(name === ''){
-      alert('setName')
+  onSubmitName(name:string,lastName:string){
+
+    if(name === '' || lastName ===''){
+      alert('Provide name and Last name')
     }else{
-       this.dataService.userNameReg(name);
+       this.dataService.userNameReg(name, lastName);
       this.userNameSet = true;
     this.inputBoxAndBtn.nativeElement.remove();
     }

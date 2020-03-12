@@ -4,19 +4,25 @@
         
       </div>
         <h1 #firstH1 *ngIf="!userNameSet" style="text-align: center;color: white;">Howdy, stranger. Haven't seen your face around here before. What's your name?</h1>
-        <h1 *ngIf="userNameSet" style="text-align: center;color: white;">Alright Mr. {{nameInput.value}}, what can I do you for?</h1>
+        <h1 *ngIf="userNameSet" style="text-align: center;color: white;">Alright Mr. {{lastNameInput.value}}, what can I do you for?</h1>
         <div class="col-xs-12 col-md-8 col-md-offset-2" #inputBoxBtn>
           <div class="form-group" >
               
-            <label>User Name</label>
+            <label style="color: white;">User Name</label>
             <input
               type="text"
               class="form-control"
               
               #nameInput>
+              <label style="color: white;">Last Name</label>
+            <input
+              type="text"
+              class="form-control"
+              
+              #lastNameInput>
           </div>
           
-          <button class="btn btn-primary btn-block" (click)="onSubmitName(nameInput.value)">Submit Name</button>   
+          <button class="btn btn-primary btn-block" (click)="onSubmitName(nameInput.value,lastNameInput.value)">Submit Name</button>   
           
         </div> 
 
@@ -27,7 +33,7 @@
     
 
     <div class="wrapper2" *ngIf="!newUser" style="text-align: center;">
-        <h2 style="text-align: center;color: white;"> Hello again, {{userNoob}} The usual? </h2>
+        <h2 style="text-align: center;color: white;"> Hello again, Mr. {{userNoob}} The usual? </h2>
         <br>
         
         <app-the-usual></app-the-usual>
