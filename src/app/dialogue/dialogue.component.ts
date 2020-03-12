@@ -23,8 +23,6 @@ userNameSet:boolean = false;
     if(this.newUser === false){
       this.userNoob = this.dataService.getUserName()
     }
-    this.dataService.checkUserExistence()
-    console.log(this.newUser)
   }
 
   del(){
