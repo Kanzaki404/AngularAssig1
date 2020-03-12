@@ -18,17 +18,17 @@ userNameSet:boolean = false;
   
   constructor(private dataService:DataService, private renderer: Renderer2) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {// check if user has visited the saloon
     this.newUser = this.dataService.checkUserExistence();
     if(this.newUser === false){
       this.userNoob = this.dataService.getUserName()
     }
   }
 
-  del(){
+  del(){ // you never met him
      this.dataService.removeUser()
   }
-  onSubmitName(name:string,lastName:string){
+  onSubmitName(name:string,lastName:string){ //submit the name to be saved in local storage and as well check if user left the input empty
 
     if(name === '' || lastName ===''){
       alert('Provide name and Last name')

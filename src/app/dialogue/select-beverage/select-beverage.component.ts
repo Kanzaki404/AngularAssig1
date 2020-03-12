@@ -17,7 +17,7 @@ export class SelectBeverageComponent implements OnInit {
   }
 
 
-  onOrder(order:string){
+  onOrder(order:string){ //send choosen beverage to be saved with the userName and hide the list.
     // this.dataService.combineUserWithDrink()
     this.dataService.beverageOrder(order);
     this.bevSelected = true;

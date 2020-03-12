@@ -13,7 +13,7 @@ export class TheUsualComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  theUsual(){
+  theUsual(){ //if user selects usual get last beverage to be displayed and remove button by toggle
     this.usualBeverage = this.dataService.getUsualBev();
     this.usualChoice = true;
 
