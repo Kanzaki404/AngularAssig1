@@ -14,7 +14,10 @@ export class DialogueComponent implements OnInit {
 userNoob:string;
 newUser:boolean;
 userNameSet:boolean = false;
-  
+beverage:string;
+usualChoice:boolean = false;
+usualBeverage:string;
+selected:boolean = false;
   
   constructor(private dataService:DataService, private renderer: Renderer2) { }
 
@@ -37,6 +40,16 @@ userNameSet:boolean = false;
       this.userNameSet = true;
     this.inputBoxAndBtn.nativeElement.remove();
     }
+  }
+
+  getBev(beverage:string){
+    this.beverage = beverage;
+    this.selected = true
+  }
+
+  getUsual(usual:string){
+    this.usualBeverage = usual
+    this.usualChoice = true
   }
 
   

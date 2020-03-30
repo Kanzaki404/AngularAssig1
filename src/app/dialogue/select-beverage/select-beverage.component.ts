@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { DataService } from 'src/app/data.service';
 
 @Component({
@@ -7,7 +7,7 @@ import { DataService } from 'src/app/data.service';
   styleUrls: ['./select-beverage.component.css']
 })
 export class SelectBeverageComponent implements OnInit {
-
+  @Output() bev = new EventEmitter<string>();
   drink:string;
   bevSelected:boolean = false;
   constructor(public dataService:DataService) { }
@@ -22,5 +22,6 @@ export class SelectBeverageComponent implements OnInit {
     this.dataService.beverageOrder(order);
     this.bevSelected = true;
     this.drink= order;
+    this.bev.emit(order);
   }
 }
